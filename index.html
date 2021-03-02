@@ -1,56 +1,101 @@
 <!DOCTYPE html>
 <style>
-.navbar1 {
+.navbar {
     display: flex;
-    height: 235px;
-    width: 100%;
-    flex-direction: Row;
-    justify-content: start;
+    align-content: center;
     font-family:Arial, sans-serif;
-    font-size: 17px;
-    grid-template-columns: reapeat(3);
-    position: center;
+    font-size: 14px;
+    height: 30px;
+    margin-top: 20px;
 }
-.navbar2{
-    display:flex;
-    height:235px;
-    width:100%;
-    flex-direction: row;
-    -ms-flex-align: end;
-    justify-content: end;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
-    padding-left: 80%;
-
-}
-
-.googlelogo {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: row;
-    justify-content: center;
-    align-content: end;
+#about {
+    justify-self: center;
+    margin-left: 20px;
+    width: 60px;
+    align-self: center;
     
 }
+#store {
+    justify-self: center;
+    align-self: center;
+    margin-right: auto;
+    width: 60px;
+    align-self: center;
+}
+#gmail {
+    justify-self: center;
+    width: 60px;
+    align-self: center;
+    
 
+}
+#images{
+    justify-self: center;
+    width: 60px;
+    align-self: center;
+}
+#waffle{
+    justify-content: center;
+    width: 60px;
+    align-self: center;
+    
+    
+}
+#account{
+    justify-content: center;
+    width: 60px;
+    align-self: center;
+    
+
+}
+.googlelogo {
+    align-self: flex-end;
+    justify-self: center;
+   
+}
+.waffle {
+    width: 18px;
+    height: 18px;
+    align-self: center;
+    justify-self: center;
+    padding-left: 15px;
+    
+}
+.acct{
+    width: 30px;
+    height: 30px;
+    align-self: center;
+    justify-self: center;
+
+}
+.logospace {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 330px;
+}
 </style>
     <html>
-        <title>Google</title>
+    <head>  
+         <title>Google</title>
+    </head>
+    <body>
       <header> 
-        <nav class= "navbar1">
-            <div>About</div>
-            <div>store</div>
-        <nav class= "navbar2">
-                <div>Gmail</div>
-                <div>Images</div>
-                <div><button>Waffle</button></div>
-                <div>Avatar placeholder</div>
+        <nav class= "navbar">
+            <div id= "about">About</div>
+            <div id= "store">Store</div>
+            <div id= "blank"></div>
+            <div id= "gmail">Gmail</div>
+            <div id= "images">Images</div>
+            <div id= "waffle"><img class= "waffle" src="https://2.bp.blogspot.com/-Yh4cJxF681U/V94jdCUSaSI/AAAAAAAAQMs/yqNhebQnNEUel6ZVDtbxRN_4Ia3oTVStwCLcB/s1600/Google%2BWaffle%2BIcon.png" alt=""></div>
+            <div id= "account"><img class= "acct" src="https://lh4.googleusercontent.com/-mp1jFJxqT2c/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucnLllfMH2mMUG-f8srw-kzsxIphSQ/s96-c-rg-br100/photo.jpg" alt=""></div>
+        </nav>    
+                
         </nav> 
     </header>
-    <div class=logospace>
-        <h1 class="googlelogo"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt=""></h1>
-    </div>
-    
+        <div class=logospace>
+            <h1 class="googlelogo"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt=""></h1>
+        </div>
+    </body>
 
    </html>
