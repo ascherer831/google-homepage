@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <style>
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
 .navbar {
     display: flex;
     align-content: center;
@@ -7,6 +15,13 @@
     font-size: 14px;
     height: 30px;
     margin-top: 20px;
+}
+.button-container{
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 35px;
+    column-gap: 20px;
 }
 #about {
     justify-self: center;
@@ -45,8 +60,60 @@
     justify-content: center;
     width: 60px;
     align-self: center;
-    
 
+}
+
+#search-field{
+    display: flex;
+    justify-self: flex-start;
+    align-self: center;
+    width: 490px;
+    height: 35px;
+    padding-left: 15px;
+    padding-top: 3px;
+    border-width: 0;
+    outline-width: 0;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+      
+}
+#spyglass {
+    display: flex;
+    justify-self: flex-start;
+    align-self: center;
+    height: 15px;
+    width: 15px;
+    padding-left: 16px;
+
+}
+#gvoice {
+    display: flex;
+    height: 21px;
+    width: 21px;
+    padding-left: 3px ;
+    justify-self: end;
+    align-self: center;
+
+}
+#searchbutton {
+    height: 36px;
+    min-width: 54px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #3c4043;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-color: transparent;
+    border-radius: 4px;
+    border-width: 1px;
+    background-color: #f8f9fa;
+    outline-width: 0;
+    
+}
+#searchbutton:hover{
+    border-color: #f8f9fa;
+    
+    
 }
 .googlelogo {
     align-self: flex-end;
@@ -58,8 +125,9 @@
     height: 18px;
     align-self: center;
     justify-self: center;
-    padding-left: 15px;
+    padding-left: 15px
     
+     
 }
 .acct{
     width: 30px;
@@ -74,6 +142,20 @@
     grid-template-columns: 100%;
     grid-template-rows: 330px;
 }
+.sbar-container {
+    display: flex;
+    width: 575px;
+    height: 43px;
+    margin: auto;
+    align-content:center;
+    border-radius: 50px; 
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    background-color: transparent;
+}
+ 
+}
 </style>
     <html>
     <head>  
@@ -82,20 +164,49 @@
     <body>
       <header> 
         <nav class= "navbar">
-            <div id= "about">About</div>
-            <div id= "store">Store</div>
+            <div id= "about">
+                <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a>
+            </div>
+            <div id= "store">
+                <a href= "https://store.google.com/US/">Store</a>
+            </div>
             <div id= "blank"></div>
-            <div id= "gmail">Gmail</div>
-            <div id= "images">Images</div>
-            <div id= "waffle"><img class= "waffle" src="https://2.bp.blogspot.com/-Yh4cJxF681U/V94jdCUSaSI/AAAAAAAAQMs/yqNhebQnNEUel6ZVDtbxRN_4Ia3oTVStwCLcB/s1600/Google%2BWaffle%2BIcon.png" alt=""></div>
-            <div id= "account"><img class= "acct" src="https://lh4.googleusercontent.com/-mp1jFJxqT2c/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucnLllfMH2mMUG-f8srw-kzsxIphSQ/s96-c-rg-br100/photo.jpg" alt=""></div>
+            <div id= "gmail">
+                <a href="https://mail.google.com/">
+                    Gmail</a>
+            </div>
+            <div id= "images">
+                <a href="https://www.google.com/imghp?hl=en&ogbl">Images</a>
+            </div>
+            <div id= "waffle">
+                <a href="">
+                    <img class= "waffle" src="https://2.bp.blogspot.com/-Yh4cJxF681U/V94jdCUSaSI/AAAAAAAAQMs/yqNhebQnNEUel6ZVDtbxRN_4Ia3oTVStwCLcB/s1600/Google%2BWaffle%2BIcon.png" alt="">
+                </a>
+            </div>
+            <div id= "account">
+                    <a href="https://github.com/ascherer831">
+                        <img class= "acct" src="https://lh4.googleusercontent.com/-mp1jFJxqT2c/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucnLllfMH2mMUG-f8srw-kzsxIphSQ/s96-c-rg-br100/photo.jpg" alt="">
+                    </a>    
+            </div>
         </nav>    
                 
-        </nav> 
+    
     </header>
-        <div class=logospace>
+        <div class="logospace">
             <h1 class="googlelogo"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt=""></h1>
         </div>
+        <form class= "sbar-container"> 
+            <div id="spyglass"><img src="https://raw.githubusercontent.com/KonradG13/google-homepage/master/search.png" alt=""></div>
+            <div><input type="text" name="" id="search-field" autofocus ></div>
+            <div id="gvoice"><img src="gvoice.png" alt=""></div>
+        </form>
+        </div>
+        <div class= "button-container">
+            <div><button type="submit" name="Google Search" id="searchbutton" value="Google Search">Google Search</button></div>
+            <div><button type="submit" name="I'm Feeling Lucky" id="searchbutton" value="I'm Feeling Lucky">I'm Feeling Lucky</button></div>
+
+        </div>
+    
     </body>
 
    </html>
