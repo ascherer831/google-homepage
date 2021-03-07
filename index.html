@@ -15,6 +15,7 @@ a:hover {
     font-size: 14px;
     height: 30px;
     margin-top: 20px;
+    color: black;
 }
 .button-container{
     display:flex;
@@ -70,7 +71,7 @@ a:hover {
     width: 490px;
     height: 35px;
     padding-left: 15px;
-    padding-top: 3px;
+    padding-top: 5px;
     border-width: 0;
     outline-width: 0;
     font-size: 18px;
@@ -106,12 +107,15 @@ a:hover {
     border-color: transparent;
     border-radius: 4px;
     border-width: 1px;
-    background-color: #f8f9fa;
+    background-color: #fafafa;
     outline-width: 0;
     
 }
 #searchbutton:hover{
-    border-color: #f8f9fa;
+    border-color:#dadce0;
+    border-style:solid;
+    border-width: 1px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
     
     
 }
@@ -137,10 +141,15 @@ a:hover {
 
 }
 .logospace {
-    display: grid;
+    display: flex;
     width: 100%;
-    grid-template-columns: 100%;
-    grid-template-rows: 200px;
+    max-height: 500px;
+    min-height: 300px;
+    justify-content: center;
+    align-content: center;
+    height: calc(100% - 560px);
+    flex-shrink: 0;
+    
 }
 .sbar-container {
     display: flex;
@@ -157,9 +166,92 @@ a:hover {
 .sbar-container:hover{
     box-shadow:0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.19);
 }
+.bnav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-end;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #70757a;
+    
+  
+}
+@media screen and (max-height:550px)  {.footer {display:none}
+
+
+}
+.b1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+.b2{
+    display: grid;
+    grid-template-columns: auto;}
+.b3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 55px;
+    background-color: #f2f2f2;
+}
+.leaf{
+    height: 17px;
+    width: 15px;
+    
+}
+.page{
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+}
+
+#advertising{
+    display: flex;
+    width:100px;
+    justify-content: center;
+    
+}
+#business{
+    display: flex;
+    width:100px;
+    justify-content: center;
+}
+#howsearchworks{
+    display: flex;
+    width:140x;
+    justify-content: center;
+}
+#carbon{
+    display: flex;
+    justify-content: center;
+    
+   
+}
+#privacy{
+    display: flex;
+    width: 100px;
+    justify-content: center;
+}
+#terms{
+    display: flex;
+    width: 100px;
+    justify-content: center;
+}
+#settings{
+    display: flex;
+    width: 100px;
+    justify-content: center;
 }
 </style>
-    <html>
+    <html class= "page">
     <head>  
          <title>Google</title>
     </head>
@@ -191,8 +283,7 @@ a:hover {
                     </a>    
             </div>
         </nav>    
-                
-    
+            
     </header>
         <div class="logospace">
             <h1 class="googlelogo"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt=""></h1>
@@ -204,11 +295,47 @@ a:hover {
         </form>
         </div>
         <div class= "button-container">
-            <div><button type="submit" name="Google Search" id="searchbutton" value="Google Search">Google Search</button></div>
-            <div><button type="submit" name="I'm Feeling Lucky" id="searchbutton" value="I'm Feeling Lucky">I'm Feeling Lucky</button></div>
+            <div><input onclick="window.location.href='tricked_you.html'" type="submit" name="Google Search" id="searchbutton" value="Google Search"></input></div>
+            <div><input onclick="window.location.href='tricked_you.html'" type="submit" name="I'm Feeling Lucky" id="searchbutton" value="I'm Feeling Lucky"></input></div>
 
         </div>
+        <div class="lowerblankspace"></div>
     
+    <footer class="footer">
+        <nav class= "bnav">
+            <div class="b1">
+                <div id= "advertising">
+                    <a href="https://ads.google.com/intl/en_us/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1#!/">Advertising</a>
+                </div>
+                <div id= "business">
+                    <a href= "https://smallbusiness.withgoogle.com/?subid=us-en-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter&utm_content=google_hpbfooter&gmbsrc=us-en_US-et-gs-z-gmb-s-z-u~sb-g4sb_srvcs-u#!/">Business</a>
+                </div>
+                <div id= "howsearchworks">
+                    <a href="https://www.google.com/search/howsearchworks/?fg=1">How Search works</a>
+                </div>
+            </div>
+            <div class="b2">
+                <div id= "carbon">
+                    <a href="https://sustainability.google/commitments/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=">
+                        <img class="leaf" src="caron.png" style="vertical-align: text-bottom; display: inline;">  Carbon neutral since 2007</a>
+                </div>
+            </div>
+            <div class="b3">
+                <div id= "privacy">
+                    <a href="https://policies.google.com/privacy?hl=en&fg=1">Privacy</a>
+                </div>
+                <div id= "terms">
+                    <a href="https://policies.google.com/terms?hl=en&fg=1">Terms</a>
+                </div>
+                <div id= "settings">
+                    <a href="">Settings</a>
+                </div>
+            </div>
+        </nav>
+
+
+    </footer>
     </body>
+
 
    </html>
